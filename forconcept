@@ -1,0 +1,18 @@
+public class Opeartor{
+	public static void main(String[] args){	
+		
+		int array_variable [] = new int [10];
+		for (int i=4; i<10 ; ++i)
+		{
+			array_variable [i] = i;
+      System.out.println (array_variable[i] +""+ i++);
+		
+}
+	}
+}
+//
+00
+22
+44
+66
+88
