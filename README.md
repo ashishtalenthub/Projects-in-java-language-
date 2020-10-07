@@ -1,1 +1,1 @@
-It is a basic repository for java programmig that i have create
+It is a  repository for java Langugae  that i have created for sharing my Projects.
