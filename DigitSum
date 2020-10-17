@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class DigitSum {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter a number : ");
+		int num = scan.nextInt();
+
+		int sum = 0, rem;
+		while (num != 0) {
+			rem = num % 10;
+			num = num / 10;
+			sum = sum + rem;
+
+		}
+
+		System.out.println("Digits sum is :" + sum);
+
+	}
+
+}
