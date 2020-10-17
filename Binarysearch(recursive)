@@ -1,0 +1,33 @@
+package io.luv2code.com;
+
+class BinarySearch {
+
+	int binarySearch(int[] arr, int left, int right, int key) {
+
+		if (left > right) {
+			return -1;
+		}
+		int mid = (left + right) / 2;
+
+		if (arr[mid] == key) {
+			return mid;
+		} else if (arr[mid] > key) {
+			return binarySearch(arr, left, mid - 1, key);
+
+		} else {
+			return binarySearch(arr, mid + 1, right, key);
+		}
+	}
+
+	public static void main(String[] args) {
+		BinarySearch bs = new BinarySearch();
+		int[] arr = { 1, 2, 3, 4, 5 };
+		int index = bs.binarySearch(arr, 0, arr.length - 1, 4);
+
+		System.out.println("Found key:" + index);
+
+		index = bs.binarySearch(arr, 0, arr.length - 1, 23);
+
+		System.out.println(" Key not found: " + index);
+	}
+}
