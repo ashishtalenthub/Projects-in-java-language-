@@ -6,11 +6,14 @@ public class Fibonacci {
       System.out.print("Enter an Year :");
       Scanner sc = new Scanner(System.in);
       year = sc.nextInt();
+      scan.close();
 
-      if (((year % 4 == 0) && (year % 400== 0)) || (year%100 != 0))
+	if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {	
          System.out.println("Specified year is a leap year");
-      else
+	}
+      else{
          System.out.println("Specified year is not a leap year");
+	}
       
    }
 }
