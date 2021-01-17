@@ -4,8 +4,8 @@ s = "abc";
 
 String s1 = "";
 
-for (int i =0; i<s.length(); i++){
-   s1 += s.charAt(s.length()-i-1;
+for (int i =0; i<s.length(); i++) {
+   s1 += s.charAt(s.length()-i-1);
  }
  
  return "s1";
