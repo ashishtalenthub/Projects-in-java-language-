@@ -1,0 +1,16 @@
+int k = 0;
+int high = n-1;
+
+// n = no of values .
+
+while (k < high)
+{
+
+int temp = arr[k];
+arr[k] = arr[high];
+arr[high] = temp;
+high--;
+k++;
+
+}
+
