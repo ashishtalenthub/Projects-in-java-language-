@@ -23,7 +23,7 @@ class Test {
         for (int i = 0; i<s1.length(); i++){
             reverse.append(s1.charAt(s1.length() - i - 1));
         }
-        System.out.println(reverse.toString());
+        System.out.println(reverse);
 
     }
 }
