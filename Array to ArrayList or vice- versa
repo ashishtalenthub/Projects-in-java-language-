@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
+class Solution {
+    public static void main(String[] args) {
+
+        String[] list = new String[] {"Python", "Ashish", "Apple", "Guava"};
+        ArrayList<String> list1 = new ArrayList<String>(Arrays.asList(list));
+        System.out.println(list1);
+
+
+    }
+}
+
+// Arraylist to Array
+
+import java.util.ArrayList;
+
+class Solution {
+    public static void main(String[] args) {
+
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("Ashish");
+        list.add("Samir");
+        list.add("Sanjay");
+        list.add("Manish");
+
+        String[] string = new String[list.size()];
+        list.toArray(string);
+        for (int i = 0; i < string.length; i++) {
+            System.out.println(string[i]);
+        }
+
+
+    }
+}
