@@ -1,0 +1,21 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class Interview {
+    public static void main(String[] args) {
+
+        Map<Integer, String> fruitMap = new HashMap<>();
+        fruitMap.put(1, "Apple");
+        fruitMap.put(2, "Banana");
+        fruitMap.put(3, "Guava");
+        fruitMap.put(4, "Orange");
+        entrySetMap(fruitMap);
+    }
+
+    private static void entrySetMap(Map<Integer, String> fruitMap) {
+        for (Map.Entry<Integer ,String> entry : fruitMap.entrySet()) {
+            System.out.println("Key  is = " +entry.getKey() );
+            System.out.println(" Value is  = " + entry.getValue());
+        }
+    }
+}
