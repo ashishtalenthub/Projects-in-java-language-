@@ -19,3 +19,18 @@ public class Digitcount {
 	}
 
 }
+
+class Test {
+    public static void main(String[] args) {
+
+        int num = 134;
+
+        int lastDigit = num % 10;
+        System.out.println(lastDigit);
+
+        int firstDigit = 0 ;
+        while (num !=0) {
+              firstDigit = num % 10;
+              num = num/10;
+        }
+        System.out.println(firstDigit);
