@@ -1,16 +1,22 @@
+import java.util.HashSet;
+import java.util.Set;
+
 class Test {
     public static void main(String[] args) {
-
-        int[] array = {1, 2, 3, 4, 5 ,3, 1};
-
-        for (int i = 0; i < array.length-1; i++) {
-            for (int j = i +1; j < array.length ; j++) {
-                if ((array[i] == array[j]) && (i != j)) {
-                    System.out.println("Duplicate elements are:" + array[j]);
-                }
+        int[] arr = {4, 1, 2, 7, 48};
+        Set<Integer> uniqueElement = new HashSet<>();
+        boolean isValueExist = false;
+        for (int i = 0; i < arr.length; i++) {
+            if (uniqueElement.contains(arr[i])) {
+                isValueExist = true;
+                System.out.println(arr[i]);
+            } else {
+                uniqueElement.add(arr[i]);
             }
         }
-
+        if (!isValueExist) {
+            System.out.println(-1);
+        }
     }
-
 }
+
