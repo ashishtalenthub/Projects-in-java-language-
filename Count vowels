@@ -1,0 +1,20 @@
+public class Interview {
+    public static void main(String[] args) {
+        System.out.println("Value is :" + countVowels("ashish kumar"));
+    }
+
+    public static int countVowels(String input) {
+        String s = "aeiou";
+        int vowelCount = 0;
+
+        for (int i = 0; i < input.length(); i++) {
+            char c = input.charAt(i);
+
+            if (s.contains(String.valueOf(c))) {
+                vowelCount++;
+            }
+        }
+        return vowelCount;
+    }
+
+}
