@@ -8,7 +8,7 @@ for (int i =0; i<s.length(); i++) {
    s1 += s.charAt(s.length()-i-1);
  }
  
- return "s1";
+ return s1;
 }
 
 
