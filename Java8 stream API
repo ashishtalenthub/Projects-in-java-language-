@@ -1,0 +1,35 @@
+package academy.learnprogrammingcode;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+class Practice {
+
+    public static void main(String[] args) {
+
+        List<Integer> list1 = Arrays.asList(13, 64, 98, 14, 109);
+
+        // find the even number in the series
+        List<Integer> newList = list1.stream().filter(i -> i % 2 == 0).collect(Collectors.toList());
+        System.out.println(newList);
+
+        // square of the follwing components
+        List<Integer> newlist1 = list1.stream().map(i -> i * i).collect(Collectors.toList());
+        System.out.println(newlist1);
+
+        // find sorted value in the list
+        list1.stream().sorted().forEach(System.out::println);
+
+        // get the minimum value of the following components
+        Integer integer = list1.stream().min((x, y) -> x.compareTo(y)).get();
+        System.out.println("Minimum element is : " + integer);
+
+        // get the maximum value of the following components
+        Integer integer1 = list1.stream().max((x, y) -> x.compareTo(y)).get();
+        System.out.println("Minimum element is : " + integer1);
+
+
+    }
+}
+
