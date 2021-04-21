@@ -9,8 +9,9 @@ public class Digitcount {
 
 		int digits = 0;
 		while (num != 0) {
-			num = num / 10;
-			digits++;
+		      int rem = num%10;
+		      digits = digits + rem;
+		      num = num/10;
 
 		}
 
