@@ -35,3 +35,20 @@ class Test {
               num = num/10;
         }
         System.out.println(firstDigit);
+	
+// reverse a digit in the number .
+
+class Solution
+{
+    public long reverse_digit(long n)
+    {
+        // Code here
+        
+        long  rem = 0 ;
+        while (n != 0){
+               rem = rem *10 + n % 10;
+               n/=10 ;
+        }
+        return rem ;
+    }
+}
