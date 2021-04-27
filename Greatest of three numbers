@@ -1,0 +1,11 @@
+class Solution {
+    
+    int greatestOfThree(int A, int B, int C) {
+        // code here
+    
+    
+    return (A > B ? (A > C ? A : C) : (B > C ? B : C));
+    
+    
+    }
+}
