@@ -1,0 +1,59 @@
+import java.lang.*;
+
+/* Time complexity = O(n)
+   Space Complexity = O(1) */
+
+class GFG {
+
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5, 5, 5, 6, 6};
+        printFreqValues(arr);
+    }
+
+    static int freq = 1;
+    static void printFreqValues(int[] arr) {
+
+        if (arr.length == 0) {
+            System.out.println("Array is empty");
+            return;
+
+        } else if (arr.length == 1) {
+            printResult(arr, 1);
+            return;
+        }
+
+        int idx = 1 ;
+        for ( ; idx < arr.length; idx++) {
+            if (isPreviousValueSameAsValueAtIdx(arr, idx)) {
+                incrementFrequency();
+            } else {
+                printResult(arr, idx);
+                resetFrequency();
+            }
+        }
+
+        if (!isPreviousValueSameAsValueAtIdx(arr, idx - 1)) {
+            freq = 1;
+        }
+
+        printResult(arr, idx);
+    }
+
+    static boolean isPreviousValueSameAsValueAtIdx(int[] arr, int idx) {
+        return arr[idx] == arr[idx - 1];
+    }
+
+    static void printResult(int[] arr, int idx) {
+        System.out.println("Frequency of " + arr[idx - 1] + " is: " + freq);
+    }
+
+    static void incrementFrequency() {
+        freq++;
+    }
+
+    static void resetFrequency() {
+        freq = 1;
+    }
+
+}
+
