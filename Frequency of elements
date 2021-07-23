@@ -1,0 +1,32 @@
+import java.util.HashMap;
+import java.util.Map;
+
+/* Time complexity = O(n)
+   Space Complexity = O(n) */
+
+public class Test {
+
+    public static void main(String[] args) {
+        int[] arr = {1, 1, 1, 2, 3, 3, 5, 5, 8, 8, 8, 9, 9, 10};
+        int n = arr.length;
+        findFrequencyOfValues(arr, n);
+    }
+
+    static void findFrequencyOfValues(int[] arr, int n) {
+
+        Map<Integer, Integer> entity = new HashMap<>();
+
+        for (int i = 0; i < n; i++) {
+            if (!entity.containsKey(arr[i])) {
+                entity.put(arr[i], 0);
+            }
+
+            entity.put(arr[i], entity.get(arr[i]) + 1);
+        }
+
+        for (Map.Entry<Integer, Integer> iterate : entity.entrySet()) {
+            System.out.println("Element " + iterate.getKey() + " occurs " + iterate.getValue() + " times");
+        }
+    }
+}
+
