@@ -1,0 +1,27 @@
+public class Test {
+
+    public static void main(String[] args) {
+
+        System.out.println(getMiddle("abcd"));
+
+    }
+
+    public static String getMiddle(String str) {
+
+        int length = str.length();
+
+        if (length % 2 == 0) {
+        // if it is even then this is the code 
+        
+
+            char one = str.charAt((length / 2) - 1);                         
+            char two = str.charAt(length / 2);
+            return one + String.valueOf(two);
+            
+        } else {
+        // for odd part
+            return String.valueOf(str.charAt((length - 1) / 2));
+        }
+    }
+
+}
