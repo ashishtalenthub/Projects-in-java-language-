@@ -1,0 +1,25 @@
+public class Peak {
+
+    public static void main(String[] args) {
+
+        int[] arr = {2, 5, 1, 4, 9, 18};
+
+        int first = Integer.MIN_VALUE;
+        int second = Integer.MIN_VALUE;
+
+        for (int value : arr) {
+            if (value > first) {
+                second = first;
+                first = value;
+
+            } else if (value > second && value != first) {
+                second = value;
+            }
+        }
+        System.out.println("Largest Value is :" + second);
+
+    }
+
+}
+
+// 2nd highest element in an array
